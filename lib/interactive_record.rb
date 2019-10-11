@@ -27,7 +27,7 @@ class InteractiveRecord
   end
   
   def table_name_for_insert
-    self.Class
+    self.Klass
     binding.pry
   end
   
