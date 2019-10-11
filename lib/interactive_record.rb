@@ -60,6 +60,9 @@ class InteractiveRecord
     value = attribute.values  
     sql = <<-SQL
       SELECT * FROM #{self.table_name}
+      WHERE ? = ?
+    SQL
+    DB[:conn].execute(sql, column, value)
     
   end
   
