@@ -20,6 +20,8 @@ class InteractiveRecord
     #binding.pry
   end 
   
-  def initialize()
+  def initialize(options = {})
+    
+  end
   
 end
