@@ -50,10 +50,10 @@ class InteractiveRecord
   def Self.find_by_name(name)
     
     sql = <<-SQL
-      Select * From #{self.table_name} 
+      Select * From ? 
       WHERE name = ?
     SQL
-    DB[:conn].execute(sql, name)
+    DB[:conn].execute(sql, self.table_name, name)
     
   end 
   
