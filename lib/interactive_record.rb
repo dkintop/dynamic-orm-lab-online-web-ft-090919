@@ -60,10 +60,10 @@ class InteractiveRecord
       value = attribute.values.first
     sql =<<-SQL
       SELECT * FROM #{self.table_name}
-      WHERE #{key} = "#{value}"
+      WHERE ? = ?
       Limit 1
     SQL
-    row = DB[:conn].execute(sql)
+    row = DB[:conn].execute(sql, key, value)
     
   end
   
