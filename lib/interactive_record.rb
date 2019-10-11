@@ -56,14 +56,14 @@ class InteractiveRecord
   end 
   
   def self.find_by(attribute)
-    attribute.keys = column
+    attribute = attribute.keys  
     value = attribute.values  
     binding.pry
     sql =<<-SQL
       SELECT * FROM #{self.class.table_name}
-      WHERE #{column} = #{value}
+      WHERE #{attribute} = #{value}
     SQL
-    DB
+    DB[:conn].execute(sql)
   end
   
   
