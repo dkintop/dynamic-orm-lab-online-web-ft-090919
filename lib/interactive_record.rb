@@ -56,14 +56,14 @@ class InteractiveRecord
   end 
   
   def self.find_by(attribute)
-      key = attribute.keys.join()
-      value = attribute.values.first
+      key = attribute.keys
+      value = attribute.values
     sql =<<-SQL
       SELECT * FROM #{self.table_name}
-      WHERE ? = ?
-      Limit 1
+      WHERE #{key} = "#{value}"
+      LIMIT 1
     SQL
-    row = DB[:conn].execute(sql, key, value)
+    row = DB[:conn].execute(sql)
     
   end
   
