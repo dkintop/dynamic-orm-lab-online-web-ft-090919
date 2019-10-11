@@ -9,10 +9,10 @@ class InteractiveRecord
   
   def self.column_names
     sql = <<-SQL 
-    Pragma table_info('#{table_name}')
+    Pragma table_info('#{self.table_name}')
     SQL
     table_info = DB[:conn].execute(sql)
-    binding.pry
+    
   end 
   
 end
