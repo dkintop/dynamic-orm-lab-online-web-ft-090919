@@ -59,7 +59,7 @@ class InteractiveRecord
     column = attribute.keys  
     
     value = attribute.values  
-    
+    binding.pry
     
   end
   
