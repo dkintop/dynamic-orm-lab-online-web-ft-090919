@@ -59,8 +59,10 @@ class InteractiveRecord
     attribute.keys
     binding.pry
     sql =<<-SQL
-    SELECT * FROM #{self.class.table_name}
-    WHERE ? = ?
+      SELECT * FROM #{self.class.table_name}
+      WHERE ? = ?
+    SQL
+    
   end
   
   
