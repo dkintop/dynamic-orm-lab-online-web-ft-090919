@@ -56,7 +56,7 @@ class InteractiveRecord
   end 
   
   def self.find_by(attribute)
-    attribute.keys
+    attribute[0].keys
     binding.pry
     sql =<<-SQL
       SELECT * FROM #{self.class.table_name}
