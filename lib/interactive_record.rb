@@ -8,8 +8,7 @@ class InteractiveRecord
   end 
   
   def self.column_names
-    self.attr_accessor
-    binding.pry
+    
   end 
   
 end
