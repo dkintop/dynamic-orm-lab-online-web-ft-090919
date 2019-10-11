@@ -56,7 +56,8 @@ class InteractiveRecord
   end 
   
   def self.find_by(attribute)
-    
+    sql =<<-SQL
+    SELECT * FROM #{self.class
   end
   
   
