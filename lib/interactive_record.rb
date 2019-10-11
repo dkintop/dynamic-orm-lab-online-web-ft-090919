@@ -64,6 +64,7 @@ class InteractiveRecord
      # WHERE #{attribute} = #{value}
     #SQL
     #DB[:conn].execute(sql)
+    value
   end
   
   
