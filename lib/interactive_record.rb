@@ -56,7 +56,7 @@ class InteractiveRecord
   end 
   
   def self.find_by(attribute)
-    attribute = attribute.keys  
+    column = attribute.keys  
     binding.pry
     value = attribute.values  
     
