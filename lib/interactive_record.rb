@@ -59,12 +59,7 @@ class InteractiveRecord
     attribute = attribute.keys  
     value = attribute.values  
     binding.pry
-    #sql =<<-SQL
-    #  SELECT * FROM #{self.class.table_name}
-     # WHERE #{attribute} = #{value}
-    #SQL
-    #DB[:conn].execute(sql)
-    value
+    
   end
   
   
