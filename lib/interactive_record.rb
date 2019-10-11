@@ -11,7 +11,8 @@ class InteractiveRecord
     sql = <<-SQL 
     Pragma table_info('#{table_name}')
     SQL
-    
+    table_info = DB[:conn].execute(sql)
+    binding.pry
   end 
   
 end
